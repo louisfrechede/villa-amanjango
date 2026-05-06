@@ -16,11 +16,11 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "Villa AmanJango — Villa d'exception à Seignosse, Landes",
+  title: "Villa AmanJango, villa d'exception à Seignosse, Landes",
   description:
     "Villa contemporaine de 600 m² au cœur des Landes : 7 chambres, piscine à débordement, terrasse de 400 m², à 1 km de l'océan Atlantique et du Golf de Seignosse. Hossegor à 4 km.",
   openGraph: {
-    title: "Villa AmanJango — Seignosse, Landes",
+    title: "Villa AmanJango, Seignosse, Landes",
     description:
       "Une villa contemporaine d'exception à Seignosse, entre forêt de pins, plages atlantiques et golfs prestigieux.",
     type: "website",

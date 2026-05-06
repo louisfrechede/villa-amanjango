@@ -1,4 +1,4 @@
-import { MapPin, Plane, Waves, Flag, ShoppingBasket } from "lucide-react";
+import { Plane, Waves, Flag, ShoppingBasket } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Section } from "@/components/ui/Section";
 
@@ -41,71 +41,16 @@ export function Location() {
       <div className="grid lg:grid-cols-12 gap-10 lg:gap-16">
         <FadeIn direction="left" className="lg:col-span-7">
           <div className="relative aspect-[4/3] w-full overflow-hidden border border-anthracite/10">
-            {/* Carte stylisée — placeholder élégant en attendant une intégration Mapbox/Google Maps */}
-            <div
-              aria-hidden
-              className="absolute inset-0 bg-stone"
-              style={{
-                backgroundImage:
-                  "radial-gradient(circle at 30% 35%, rgba(135,165,150,0.35), transparent 60%), radial-gradient(circle at 75% 70%, rgba(176,137,104,0.25), transparent 55%), linear-gradient(135deg, #e8e2d5 0%, #d8cfbb 100%)",
-              }}
+            <iframe
+              title="Carte de la Villa AmanJango"
+              src="https://maps.google.com/maps?q=28%20Avenue%20d%27Augusta%2C%2040510%20Seignosse&t=&z=14&ie=UTF8&iwloc=&output=embed"
+              className="absolute inset-0 w-full h-full"
+              style={{ border: 0 }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
             />
-            <svg
-              aria-hidden
-              className="absolute inset-0 w-full h-full opacity-40 mix-blend-multiply"
-              viewBox="0 0 600 450"
-              preserveAspectRatio="none"
-            >
-              <path
-                d="M0,260 Q120,210 240,250 T480,230 T600,260 L600,450 L0,450 Z"
-                fill="#5a7a6c"
-                opacity="0.35"
-              />
-              <path
-                d="M0,290 Q140,240 280,280 T560,260 T600,280 L600,450 L0,450 Z"
-                fill="#3f4754"
-                opacity="0.25"
-              />
-              {[...Array(20)].map((_, i) => (
-                <line
-                  key={`h${i}`}
-                  x1="0"
-                  x2="600"
-                  y1={i * 22}
-                  y2={i * 22}
-                  stroke="#1f2937"
-                  strokeWidth="0.3"
-                  opacity="0.15"
-                />
-              ))}
-              {[...Array(28)].map((_, i) => (
-                <line
-                  key={`v${i}`}
-                  y1="0"
-                  y2="450"
-                  x1={i * 22}
-                  x2={i * 22}
-                  stroke="#1f2937"
-                  strokeWidth="0.3"
-                  opacity="0.15"
-                />
-              ))}
-            </svg>
-
-            {/* Marker */}
-            <div className="absolute top-[42%] left-[44%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
-              <div className="relative">
-                <span className="absolute inset-0 -m-2 rounded-full bg-anthracite/20 animate-ping" />
-                <span className="relative w-10 h-10 rounded-full bg-anthracite text-cream flex items-center justify-center shadow-lg">
-                  <MapPin size={18} strokeWidth={2} />
-                </span>
-              </div>
-              <span className="mt-3 px-3 py-1.5 bg-cream text-anthracite text-[10px] tracking-[0.25em] uppercase shadow-sm">
-                Villa AmanJango
-              </span>
-            </div>
-
-            <div className="absolute bottom-4 left-4 text-[10px] tracking-[0.2em] uppercase text-anthracite-soft bg-cream/80 backdrop-blur-sm px-3 py-1.5">
+            <div className="absolute bottom-4 left-4 text-[10px] tracking-[0.2em] uppercase text-anthracite-soft bg-cream/90 backdrop-blur-sm px-3 py-1.5 pointer-events-none">
               Seignosse · Landes · France
             </div>
           </div>

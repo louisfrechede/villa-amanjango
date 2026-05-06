@@ -17,7 +17,7 @@ const reviews: Review[] = [
     name: "Camille",
     origin: "Paris",
     date: "Août 2025",
-    text: "Une parenthèse hors du temps. La villa est encore plus belle que sur les photos — l'architecture, les volumes, la lumière atlantique qui traverse les pièces toute la journée. Nous étions douze, chacun a trouvé son coin pour lire, travailler ou rêver. Le bassin à débordement face aux pins, c'est inoubliable.",
+    text: "Une parenthèse hors du temps. La villa est encore plus belle que sur les photos : l'architecture, les volumes, la lumière atlantique qui traverse les pièces toute la journée. Nous étions douze, chacun a trouvé son coin pour lire, travailler ou rêver. Le bassin à débordement face aux pins, c'est inoubliable.",
     highlight: "Une parenthèse hors du temps.",
   },
   {
@@ -31,20 +31,20 @@ const reviews: Review[] = [
     name: "Sophie",
     origin: "Genève",
     date: "Juillet 2025",
-    text: "Nous sommes venus en famille avec trois générations sous le même toit. Les sept chambres permettent à chacun son intimité, la pièce de réception nous a tous rassemblés pour les dîners. La plage du Penon à un kilomètre, accessible en vélo par la pinède — un bonheur quotidien.",
+    text: "Nous sommes venus en famille avec trois générations sous le même toit. Les sept chambres permettent à chacun son intimité, la pièce de réception nous a tous rassemblés pour les dîners. La plage du Penon à un kilomètre, accessible en vélo par la pinède : un bonheur quotidien.",
   },
   {
     name: "Marc & Hélène",
     origin: "Londres",
     date: "Mai 2025",
-    text: "Le luxe sans l'ostentation. Tout est pensé avec un goût très sûr — les matières, la literie, les détails de décoration. Le service de ménage quotidien et la qualité du linge nous ont rappelé les meilleurs hôtels. Nous reviendrons sans hésiter au printemps prochain.",
+    text: "Le luxe sans l'ostentation. Tout est pensé avec un goût très sûr : les matières, la literie, les détails de décoration. Le service de ménage quotidien et la qualité du linge nous ont rappelé les meilleurs hôtels. Nous reviendrons sans hésiter au printemps prochain.",
     highlight: "Le luxe sans l'ostentation.",
   },
   {
     name: "Thomas",
     origin: "Lyon",
     date: "Septembre 2025",
-    text: "Nous avons organisé un week-end d'entreprise pour dix collaborateurs. La villa est idéale pour ce format — espaces de travail confortables, fibre haut débit, et le soir, le luxe d'un dîner sur la terrasse face au coucher de soleil. Une expérience marquante pour toute l'équipe.",
+    text: "Nous avons organisé un week-end d'entreprise pour dix collaborateurs. La villa est idéale pour ce format : espaces de travail confortables, fibre haut débit, et le soir, le luxe d'un dîner sur la terrasse face au coucher de soleil. Une expérience marquante pour toute l'équipe.",
   },
 ];
 

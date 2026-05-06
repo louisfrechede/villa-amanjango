@@ -36,7 +36,7 @@ export function About() {
             <p className="text-lg leading-relaxed text-anthracite-soft">
               Sept suites baignées de clarté s&apos;ouvrent sur le jardin, le
               bassin ou les pins. Une vaste pièce de réception de 165 m²
-              prolonge la cuisine équipée d&apos;un îlot central — l&apos;espace
+              prolonge la cuisine équipée d&apos;un îlot central, l&apos;espace
               idéal pour réunir famille, amis et partenaires de golf autour
               d&apos;un long week-end.
             </p>

@@ -20,7 +20,7 @@ const amenities = [
     icon: Waves,
     title: "Piscine à débordement",
     description:
-      "Bassin privé de 18 m² au cœur de la terrasse en bois — chauffé en intersaison sur demande.",
+      "Bassin privé de 18 m² au cœur de la terrasse en bois, chauffé en intersaison sur demande.",
   },
   {
     icon: Bed,
@@ -56,7 +56,7 @@ const amenities = [
     icon: Wifi,
     title: "WiFi haut débit",
     description:
-      "Fibre couvrant l'ensemble de la propriété — espaces de travail confortables.",
+      "Fibre couvrant l'ensemble de la propriété, idéale pour les espaces de travail.",
   },
   {
     icon: Snowflake,
@@ -86,7 +86,7 @@ const amenities = [
     icon: Flame,
     title: "Cheminée & espace lounge",
     description:
-      "Salon en double hauteur avec cheminée — pour les soirées plus fraîches d'arrière-saison.",
+      "Salon en double hauteur avec cheminée, parfait pour les soirées plus fraîches d'arrière-saison.",
   },
 ];
 

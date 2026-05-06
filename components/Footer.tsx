@@ -19,7 +19,7 @@ export function Footer() {
         <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-16">
           <FadeIn direction="up" className="lg:col-span-5">
             <p className="text-xs uppercase tracking-[0.3em] text-sage-soft mb-5">
-              Réserver — Contact
+              Réserver, contact
             </p>
             <h2 className="font-serif text-4xl sm:text-5xl leading-[1.05] tracking-tight">
               Composons ensemble votre séjour à Seignosse.
@@ -45,7 +45,7 @@ export function Footer() {
                   className="text-sage-soft"
                   strokeWidth={1.5}
                 />
-                <span>28 Avenue d&apos;Augusta, 40510 Seignosse — France</span>
+                <span>28 Avenue d&apos;Augusta, 40510 Seignosse, France</span>
               </div>
               <div className="flex items-center gap-4 text-cream/85">
                 <Camera
@@ -128,7 +128,7 @@ export function Footer() {
         <div className="max-w-7xl mx-auto mt-20 pt-8 border-t border-cream/10 flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between text-xs text-cream/50">
           <p className="font-serif text-base text-cream">Villa AmanJango</p>
           <p>
-            © {new Date().getFullYear()} Villa AmanJango — Seignosse, Landes.
+            © {new Date().getFullYear()} Villa AmanJango, Seignosse, Landes.
             Tous droits réservés.
           </p>
         </div>
