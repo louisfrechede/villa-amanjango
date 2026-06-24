@@ -52,3 +52,12 @@ body {
   break-inside: avoid;
   margin-bottom: 1.25rem;
 }
+
+/* Carrousel horizontal : masque la barre de défilement */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

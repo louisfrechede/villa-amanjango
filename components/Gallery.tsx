@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
@@ -99,6 +99,16 @@ export function Gallery() {
   const reduce = useReducedMotion();
   const [active, setActive] = useState<"lavilla" | CatKey>("lavilla");
   const [lightbox, setLightbox] = useState<number | null>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
+
+  const scrollTrack = (dir: 1 | -1) => {
+    const el = trackRef.current;
+    if (!el) return;
+    el.scrollBy({
+      left: dir * el.clientWidth * 0.8,
+      behavior: reduce ? "auto" : "smooth",
+    });
+  };
 
   const visible =
     active === "lavilla"
@@ -157,36 +167,66 @@ export function Gallery() {
         })}
       </div>
 
-      {/* Grille masonry, ré-animée à chaque changement d'onglet */}
-      <div key={active} className="masonry">
-        {visible.map((p, i) => (
-          <motion.figure
-            key={p.src}
-            initial={reduce ? false : { opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.6,
-              delay: Math.min(i, 8) * 0.05,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            className="group relative overflow-hidden bg-stone cursor-pointer"
-            onClick={() => setLightbox(i)}
-          >
-            <div className={`relative w-full ${ratioClass[p.ratio]}`}>
-              <Image
-                src={p.src}
-                alt={catAlt[p.cat]}
-                fill
-                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
-              />
-            </div>
-            <figcaption className="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-anthracite/70 via-anthracite/20 to-transparent text-cream text-[10px] tracking-[0.2em] uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-              {categories.find((c) => c.key === p.cat)?.label}
-            </figcaption>
-          </motion.figure>
-        ))}
+      {/* Carrousel horizontal, ré-initialisé à chaque changement d'onglet */}
+      <div className="relative -mx-6 sm:-mx-10 lg:-mx-16">
+        <div
+          key={active}
+          ref={trackRef}
+          className="no-scrollbar flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory px-6 sm:px-10 lg:px-16 pb-4"
+        >
+          {visible.map((p, i) => (
+            <motion.figure
+              key={p.src}
+              initial={reduce ? false : { opacity: 0, x: 32 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{
+                duration: 0.6,
+                delay: Math.min(i, 6) * 0.06,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="group relative shrink-0 snap-start overflow-hidden bg-stone cursor-pointer"
+              onClick={() => setLightbox(i)}
+            >
+              <div
+                className={`relative h-[58vw] w-[82vw] sm:h-[440px] lg:h-[560px] sm:w-auto ${ratioClass[p.ratio]}`}
+              >
+                <Image
+                  src={p.src}
+                  alt={catAlt[p.cat]}
+                  fill
+                  sizes="(min-width: 1024px) 50vw, (min-width: 640px) 60vw, 82vw"
+                  className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
+                />
+              </div>
+              <figcaption className="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-anthracite/70 via-anthracite/20 to-transparent text-cream text-[10px] tracking-[0.2em] uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                {categories.find((c) => c.key === p.cat)?.label}
+              </figcaption>
+            </motion.figure>
+          ))}
+        </div>
+
+        {/* Flèches de défilement (masquées sur mobile : swipe natif) */}
+        <button
+          type="button"
+          aria-label="Photos précédentes"
+          onClick={() => scrollTrack(-1)}
+          className="hidden sm:flex absolute left-4 lg:left-10 top-1/2 -translate-y-1/2 z-10 w-12 h-12 items-center justify-center bg-cream/90 backdrop-blur text-anthracite border border-anthracite/15 hover:bg-cream shadow-sm transition-colors"
+        >
+          <ChevronLeft size={22} />
+        </button>
+        <button
+          type="button"
+          aria-label="Photos suivantes"
+          onClick={() => scrollTrack(1)}
+          className="hidden sm:flex absolute right-4 lg:right-10 top-1/2 -translate-y-1/2 z-10 w-12 h-12 items-center justify-center bg-cream/90 backdrop-blur text-anthracite border border-anthracite/15 hover:bg-cream shadow-sm transition-colors"
+        >
+          <ChevronRight size={22} />
+        </button>
       </div>
+
+      <p className="mt-5 text-[11px] tracking-[0.2em] uppercase text-anthracite-muted sm:hidden">
+        Faites glisser pour parcourir →
+      </p>
 
       {/* Lightbox plein écran */}
       <AnimatePresence>
