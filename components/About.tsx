@@ -2,9 +2,9 @@ import Image from "next/image";
 import { FadeIn } from "@/components/ui/FadeIn";
 
 const facts = [
-  { value: "7", label: "Chambres" },
-  { value: "600 m²", label: "Surface habitable" },
-  { value: "400 m²", label: "Terrasse" },
+  { value: "500 m²", label: "Surface habitable" },
+  { value: "7", label: "Suites" },
+  { value: "165 m²", label: "Pièce de réception" },
   { value: "1 km", label: "De l'océan" },
 ];
 
@@ -17,42 +17,99 @@ export function About() {
             La Villa
           </p>
           <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-tight">
-            Une parenthèse contemporaine au cœur de la forêt landaise.
+            Une propriété d&apos;exception en bordure de l&apos;un des plus beaux
+            golfs d&apos;Europe.
           </h2>
+
+          <div className="mt-10 border border-sage-deep/20 px-6 py-5">
+            <p className="text-[10px] uppercase tracking-[0.3em] text-sage-deep mb-2">
+              Sélection presse
+            </p>
+            <p className="text-sm leading-relaxed text-anthracite-soft">
+              Retenue par le magazine{" "}
+              <em className="font-serif not-italic text-anthracite">
+                Elle Décoration
+              </em>{" "}
+              parmi les plus belles villas à louer du sud de la France.
+            </p>
+          </div>
         </FadeIn>
 
         <div className="lg:col-span-7 space-y-8">
           <FadeIn direction="up" delay={0.1}>
             <p className="text-lg leading-relaxed text-anthracite-soft">
-              Posée à l&apos;orée des pins entre Seignosse et Hossegor, la Villa
-              AmanJango déploie 600 m² d&apos;architecture contemporaine, une
-              terrasse de 400 m² et une piscine à débordement de 18 m². Ses
-              lignes épurées dialoguent avec la lumière atlantique et le silence
-              singulier de la forêt landaise.
+              AmanJango est une propriété d&apos;exception située à
+              Seignosse-Hossegor, en bordure de l&apos;un des plus beaux golfs
+              d&apos;Europe et à seulement 1&nbsp;km de l&apos;océan Atlantique.
+              Cette remarquable réalisation d&apos;architecture californienne
+              développe près de 500&nbsp;m² habitables et offre des prestations
+              de très haut standing.
             </p>
           </FadeIn>
 
           <FadeIn direction="up" delay={0.2}>
             <p className="text-lg leading-relaxed text-anthracite-soft">
-              Sept suites baignées de clarté s&apos;ouvrent sur le jardin, le
-              bassin ou les pins. Une vaste pièce de réception de 165 m²
-              prolonge la cuisine équipée d&apos;un îlot central, l&apos;espace
-              idéal pour réunir famille, amis et partenaires de golf autour
-              d&apos;un long week-end.
+              Idéalement située dans un environnement préservé, la villa
+              bénéficie d&apos;un emplacement privilégié à proximité des plages
+              sauvages de l&apos;Atlantique, accessibles en quelques minutes à
+              vélo. Entre golf, pinède et littoral, elle offre un cadre de vie
+              rare propice à la détente et aux loisirs de plein air.
             </p>
           </FadeIn>
 
           <FadeIn direction="up" delay={0.3}>
             <p className="text-lg leading-relaxed text-anthracite-soft">
-              À un kilomètre, la plage du Penon, ses vagues et son sable infini.
-              À 1,2 km, le Golf de Seignosse, l&apos;un des plus beaux parcours
-              de la côte ; à 4 km, Hossegor, son lac, son marché et son golf
-              d&apos;exception. Un point de départ rare, entre <em>slow living</em>{" "}
-              landais et art de vivre atlantique.
+              Dès l&apos;entrée, les volumes impressionnent avec une
+              spectaculaire pièce de réception de 165&nbsp;m², baignée de lumière
+              et largement ouverte sur de vastes terrasses. La cuisine haut de
+              gamme signée <em>Boffi</em>, organisée autour d&apos;un élégant
+              îlot central, séduira les amateurs de design et de gastronomie.
             </p>
           </FadeIn>
 
-          <FadeIn direction="up" delay={0.4} className="pt-12">
+          <FadeIn direction="up" delay={0.35}>
+            <p className="text-lg leading-relaxed text-anthracite-soft">
+              La propriété comprend 7 suites, chacune disposant de sa salle de
+              bains privative, garantissant à ses occupants confort et intimité.
+              Une salle de sport entièrement équipée en matériel{" "}
+              <em>Technogym</em> complète cet ensemble dédié au bien-être.
+            </p>
+          </FadeIn>
+
+          <FadeIn direction="up" delay={0.4}>
+            <div className="relative aspect-[4/3] w-full overflow-hidden">
+              <Image
+                src="/photos/villa-piscine.jpg"
+                alt="La villa et sa piscine à débordement, ouvertes sur la pinède"
+                fill
+                sizes="(min-width: 1024px) 60vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+          </FadeIn>
+
+          <FadeIn direction="up" delay={0.45}>
+            <p className="text-lg leading-relaxed text-anthracite-soft">
+              À l&apos;extérieur, un magnifique jardin paysager conçu par un
+              architecte de renommée internationale met en valeur la propriété.
+              Une élégante piscine chauffée à débordement de 18 mètres,
+              plusieurs espaces lounge ainsi qu&apos;une cuisine d&apos;été
+              signée <em>Boffi</em> permettent de profiter pleinement du climat
+              exceptionnel de la côte landaise.
+            </p>
+          </FadeIn>
+
+          <FadeIn direction="up" delay={0.5}>
+            <p className="text-lg leading-relaxed text-anthracite-soft">
+              À l&apos;abri de tous les regards, la villa bénéficie d&apos;une
+              parfaite intimité, sans aucun vis-à-vis, garantissant calme et
+              sérénité. Un service de gouvernante est inclus à raison de 5 heures
+              par jour, plaçant chaque séjour sous le signe du confort et de la
+              qualité.
+            </p>
+          </FadeIn>
+
+          <FadeIn direction="up" delay={0.55} className="pt-12">
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-10 gap-x-6 border-t border-sage-deep/20 pt-12">
               {facts.map((fact) => (
                 <div
@@ -67,18 +124,6 @@ export function About() {
                   </span>
                 </div>
               ))}
-            </div>
-          </FadeIn>
-
-          <FadeIn direction="up" delay={0.5} className="pt-6">
-            <div className="relative aspect-[4/3] w-full overflow-hidden">
-              <Image
-                src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1600&q=80"
-                alt="Architecture contemporaine de la villa"
-                fill
-                sizes="(min-width: 1024px) 60vw, 100vw"
-                className="object-cover"
-              />
             </div>
           </FadeIn>
         </div>

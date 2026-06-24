@@ -43,6 +43,7 @@ next-env.d.ts
 # Fichiers d'instructions IA (Claude Code, agents)
 AGENTS.md
 CLAUDE.md
+.claude/
 
 # Anciens dossiers en double à ignorer
 Villa Amanjango/

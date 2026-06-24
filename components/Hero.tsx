@@ -13,8 +13,8 @@ export function Hero() {
       className="relative min-h-[100svh] w-full flex items-end overflow-hidden"
     >
       <Image
-        src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=2400&q=80"
-        alt="Villa AmanJango, vue d'ensemble au crépuscule"
+        src="/photos/hero-piscine-villa.jpg"
+        alt="Villa AmanJango, piscine à débordement et villa au cœur des pins"
         fill
         priority
         sizes="100vw"
@@ -36,7 +36,7 @@ export function Hero() {
             transition={{ duration: 0.9, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             className="text-cream/90 text-xs tracking-[0.4em] uppercase mb-6"
           >
-            Seignosse · Landes · Côte Atlantique
+            Seignosse-Hossegor · Landes · Côte Atlantique
           </motion.p>
 
           <motion.h1
@@ -54,10 +54,10 @@ export function Hero() {
             transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
             className="mt-8 text-cream/85 text-lg sm:text-xl max-w-xl leading-relaxed font-light"
           >
-            Une villa contemporaine de 600 m² au cœur de la forêt landaise.
-            Sept chambres, piscine à débordement et terrasse de 400 m². À un
-            kilomètre seulement de l&apos;océan Atlantique et du Golf de
-            Seignosse.
+            Une réalisation d&apos;architecture californienne de près de 500 m²
+            en bordure de l&apos;un des plus beaux golfs d&apos;Europe. Sept
+            suites, piscine à débordement de 18 mètres, à seulement 1 km de
+            l&apos;océan Atlantique.
           </motion.p>
 
           <motion.div

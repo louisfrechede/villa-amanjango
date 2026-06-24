@@ -10,7 +10,7 @@ import {
   Bath,
   Bed,
   Utensils,
-  Flame,
+  Dumbbell,
 } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Section } from "@/components/ui/Section";
@@ -36,9 +36,9 @@ const amenities = [
   },
   {
     icon: Utensils,
-    title: "Cuisine équipée",
+    title: "Cuisine signée Boffi",
     description:
-      "Pièce ouverte avec îlot central, électroménager professionnel et grande table conviviale.",
+      "Cuisine haut de gamme Boffi et son îlot central, prolongée par une cuisine d'été pour les longues tablées en terrasse.",
   },
   {
     icon: Flag,
@@ -66,9 +66,9 @@ const amenities = [
   },
   {
     icon: Sparkles,
-    title: "Service de ménage",
+    title: "Service de gouvernante",
     description:
-      "Entretien quotidien et linge de maison de qualité hôtelière inclus dans le séjour.",
+      "Gouvernante incluse 5 heures par jour et linge de maison de qualité hôtelière, pour un séjour sans souci.",
   },
   {
     icon: Car,
@@ -83,10 +83,10 @@ const amenities = [
       "Vos compagnons à quatre pattes sont les bienvenus, sans frais supplémentaires.",
   },
   {
-    icon: Flame,
-    title: "Cheminée & espace lounge",
+    icon: Dumbbell,
+    title: "Salle de sport Technogym",
     description:
-      "Salon en double hauteur avec cheminée, parfait pour les soirées plus fraîches d'arrière-saison.",
+      "Espace fitness entièrement équipé en matériel Technogym, dédié au bien-être et à la remise en forme.",
   },
 ];
 
